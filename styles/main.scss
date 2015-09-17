@@ -15,10 +15,40 @@ body {
 	.btn-default {
 		background-color: #2DCCFA;
 		border: none;
+		color: white;
+		outline: none;
+	}
+
+	#cancel {
+		background-color: #F3F3F3;
+		color: black;
+	}
+
+	#cancel:hover {
+		background: #E32171;
+	}
+
+	#error {
+		color: red;
+		display: none;
+		padding-top: 1em;
 	}
 
 	#add-pic {
 		padding: 4em 15em;
 		background: white;
+		display: none
+	}
+
+	#pic-window {
+		div {
+			text-align: center;
+			width 100%;
+		}
+		padding: 2em;
+	}
+
+	.post {
+		margin: 0 auto;
 	}
 }

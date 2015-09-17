@@ -19,16 +19,16 @@
     </nav>
     <section id="add-pic">
         <form>
-            <input type="text" class="form-control" placeholder="Image URL">
-            <textarea class="form-control" rows="3" placeholder="caption"></textarea>
-            <a class="btn btn-default" href="#" role="button">Cancel</a>
-            <button class="btn btn-default" type="submit">Upload</button>
+            <input type="text" class="form-control" placeholder="Image URL" id="new-pix">
+            <textarea class="form-control" rows="3" placeholder="caption" id="new-pixcap"></textarea>
+            <a class="btn btn-default" href="#" role="button" id="cancel">Cancel</a>
+            <button class="btn btn-default glyphicon glyphicon-camera" type="submit"> Upload</button>
+            <div id="error">Please enter a valid image type and description!</div>
         </form>
     </section>
-    <section id="pic-window">
-        test
-    </section>
+    <section id="pic-window"></section>
     <script type="text/javascript" src="/node_modules/jquery/dist/jquery.min.js"></script>
+
     <script type="text/javascript" src="/scripts/main.js"></script>
 </body>
 

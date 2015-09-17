@@ -9,7 +9,26 @@ body {
     margin-bottom: 1em; }
   body .btn-default {
     background-color: #2DCCFA;
-    border: none; }
+    border: none;
+    color: white;
+    outline: none; }
+  body #cancel {
+    background-color: #F3F3F3;
+    color: black; }
+  body #cancel:hover {
+    background: #E32171; }
+  body #error {
+    color: red;
+    display: none;
+    padding-top: 1em; }
   body #add-pic {
     padding: 4em 15em;
-    background: white; }
+    background: white;
+    display: none; }
+  body #pic-window {
+    padding: 2em; }
+  body .post {
+    margin: 0 auto;
+    text-align: right; }
+  body img {
+    width: 100%; }
