@@ -1,0 +1,24 @@
+body {
+	background: gray;
+
+	.navbar-default {
+		background: #FD9126;
+		border: none;
+		padding: 1em 0;
+		margin-bottom: 0;
+	}
+
+	textarea.form-control {
+		margin-bottom: 1em;
+	}
+
+	.btn-default {
+		background-color: #2DCCFA;
+		border: none;
+	}
+
+	#add-pic {
+		padding: 4em 15em;
+		background: white;
+	}
+}
