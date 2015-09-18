@@ -1,54 +1,112 @@
 body {
-	background: gray;
+    background: gray;
+    #loginboxwrapper {
+        padding-top: 10em;
+        //display: none;
+    }
+    #loginbox {
+        background: #FD9126;
+        width: 80%;
+        margin: 0 auto;
+        padding: 3em;
+        border-radius: 8px;
+    }
+    .login {
+        text-align: center;
+    }
 
-	.navbar-default {
-		background: #FD9126;
-		border: none;
-		padding: 1em 0;
-		margin-bottom: 0;
-	}
+    .register {
+    	overflow: hidden;
+    }
 
-	textarea.form-control {
-		margin-bottom: 1em;
-	}
+    .inputwrapper {
+        padding-bottom: 1em;
+    }
+    #sitewrapper {
+        display: none;
+    }
+    #sign-up {
+        display: none;
+    }
 
-	.btn-default {
-		background-color: #2DCCFA;
-		border: none;
-		color: white;
-		outline: none;
-	}
+    #back {
+    	display: none;
+    }
+    .navbar-default {
+        background: #FD9126;
+        border: none;
+        padding: 1em 0;
+        margin-bottom: 0;
+    }
+    textarea.form-control {
+        margin-bottom: 1em;
+    }
+    .btn-default {
+        background-color: #2DCCFA;
+        border: none;
+        color: white;
+        outline: none;
+        float: right;
+        margin-right: 1em;
+    }
+    .cancel {
+        background-color: #F3F3F3;
+        color: black;
+        margin-top: 1px;
+    }
+    .cancel:hover {
+        background: #E32171;
+    }
+    #error {
+        color: white;
+    }
+    #add-pic {
+        padding: 4em 5em;
+        background: white;
+        display: none;
+    }
+    #pic-window {
+        margin: 2em auto;
+        background: rgba(0, 22, 40, .1);
+        div {
+            text-align: center;
+        }
+        padding: 2em;
+        width: 60%;
+    }
+    h1 {
+        color: white;
+        text-align: center;
+        font-family: 'Orbitron', sans-serif;
+        background: transparent;
+    }
+    .off-color {
+        color: #FD9126;
+    }
+    .off-color2 {
+        color: gray;
+    }
+    img {
+        width: 100%;
+    }
+    .post {
+        width: 60%;
+        margin: 0 auto;
+        text-align: center;
+    }
+    .post > .cap {
+        padding: 1em 0;
+        color: white;
+        font-weight: 500;
+        margin-bottom: 1em;
+        background: #FD9126;
+        max-width: 100%;
+    }
+}
 
-	#cancel {
-		background-color: #F3F3F3;
-		color: black;
-	}
-
-	#cancel:hover {
-		background: #E32171;
-	}
-
-	#error {
-		color: red;
-		display: none;
-		padding-top: 1em;
-	}
-
-	#add-pic {
-		padding: 4em 15em;
-		background: white;
-		display: none
-	}
-
-	#pic-window {
-		div {
-			text-align: center;
-			width 100%;
-		}
-		padding: 2em;
-	}
-
-	.post {
-		margin: 0 auto;
-	}
+@media screen and (min-width: 880px) {
+    form {
+        width: 585px;
+        margin: 0 auto;
+    }
 }

@@ -2,34 +2,81 @@
 <html>
 
 <head>
-    <title>JALLEN's PIC FAVS</title>
+    <title>WebRookie</title>
+    <link href="https://fonts.googleapis.com/css?family=Orbitron:400,500,700,900" rel="stylesheet" type="text/css">
     <link rel="stylesheet" type="text/css" href="/node_modules/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="/styles/main.sass.css">
 </head>
 
 <body>
-    <nav class="navbar navbar-default">
-        <div class="container-fluid">
-            <div class="navbar-header">
-                <button type="button" class="btn btn-default" aria-label="Left Align">
-                    <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
-                </button>
+    <div id="loginboxwrapper">
+        <div id="loginbox" class="login">
+            <div class="register">
+                <button class="btn btn-default" type="submit" id="register-button">Sign Up</button>
             </div>
+            <div class="register">
+                <button class="btn btn-default" type="submit" id="back">Back</button>
+            </div>
+            <div>
+                <h1>Web<span class="off-color2">Rookie</span> Moments and <span class="off-color2">Mishaps</span></h1>
+            </div>
+            <form id="login">
+                <div class="inputwrapper">
+                    <input type="email" placeholder="email" class="form-control" id="newuser">
+                </div>
+                <div class="inputwrapper">
+                    <input id="log-pass" placeholder="password" class="form-control" type="password">
+                </div>
+                <div>
+                    <button class="btn btn-default" type="submit">Login</button>
+                    <a class="btn btn-default cancel" href="#" role="button">Clear</a>
+                </div>
+            </form>
+            <form id="sign-up">
+                <div class="inputwrapper">
+                    <input type="email" placeholder="email" class="form-control" id="newuemail">
+                </div>
+                <div class="inputwrapper">
+                    <input id="createpass" placeholder="new password" class="form-control">
+                </div>
+                <div class="inputwrapper">
+                    <input id="confirmpass" placeholder="retype password" class="form-control">
+                </div>
+                <div>
+                    <button class="btn btn-default" type="submit">Register</button>
+                    <a class="btn btn-default cancel" href="#" role="button">Clear</a>
+                </div>
+            </form>
         </div>
-    </nav>
-    <section id="add-pic">
-        <form>
-            <input type="text" class="form-control" placeholder="Image URL" id="new-pix">
-            <textarea class="form-control" rows="3" placeholder="caption" id="new-pixcap"></textarea>
-            <a class="btn btn-default" href="#" role="button" id="cancel">Cancel</a>
-            <button class="btn btn-default glyphicon glyphicon-camera" type="submit"> Upload</button>
-            <div id="error">Please enter a valid image type and description!</div>
-        </form>
-    </section>
-    <section id="pic-window"></section>
+    </div>
+    <div id="sitewrapper">
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="btn btn-default" aria-label="Left Align">
+                        <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>ADD
+                    </button>
+                </div>
+            </div>
+        </nav>
+        <section id="add-pic">
+            <form>
+                <input type="text" class="form-control" placeholder="Image URL" id="new-pix">
+                <textarea class="form-control" rows="3" placeholder="caption" id="new-pixcap"></textarea>
+                <a class="btn btn-default cancel" href="#" role="button">Cancel</a>
+                <button class="btn btn-default glyphicon glyphicon-camera" type="submit"> Upload</button>
+                <div id="error">Please enter a valid image type and description!</div>
+            </form>
+        </section>
+        <h1>Web<span class="off-color">Rookie</span> Moments and <span class="off-color">Mishaps</span></h1>
+        <div class="picturewrapper">
+            <section id="pic-window" class="container-fluid"></section>
+        </div>
+    </div>
     <script type="text/javascript" src="/node_modules/jquery/dist/jquery.min.js"></script>
 
     <script type="text/javascript" src="/scripts/main.js"></script>
+
 </body>
 
 </html>

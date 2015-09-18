@@ -1,5 +1,25 @@
 body {
   background: gray; }
+  body #loginboxwrapper {
+    padding-top: 10em; }
+  body #loginbox {
+    background: #FD9126;
+    width: 80%;
+    margin: 0 auto;
+    padding: 3em;
+    border-radius: 8px; }
+  body .login {
+    text-align: center; }
+  body .register {
+    overflow: hidden; }
+  body .inputwrapper {
+    padding-bottom: 1em; }
+  body #sitewrapper {
+    display: none; }
+  body #sign-up {
+    display: none; }
+  body #back {
+    display: none; }
   body .navbar-default {
     background: #FD9126;
     border: none;
@@ -11,24 +31,52 @@ body {
     background-color: #2DCCFA;
     border: none;
     color: white;
-    outline: none; }
-  body #cancel {
+    outline: none;
+    float: right;
+    margin-right: 1em; }
+  body .cancel {
     background-color: #F3F3F3;
-    color: black; }
-  body #cancel:hover {
+    color: black;
+    margin-top: 1px; }
+  body .cancel:hover {
     background: #E32171; }
   body #error {
-    color: red;
-    display: none;
-    padding-top: 1em; }
+    color: white; }
   body #add-pic {
-    padding: 4em 15em;
+    padding: 4em 5em;
     background: white;
     display: none; }
   body #pic-window {
-    padding: 2em; }
-  body .post {
-    margin: 0 auto;
-    text-align: right; }
+    margin: 2em auto;
+    background: rgba(0, 22, 40, 0.1);
+    padding: 2em;
+    width: 60%; }
+    body #pic-window div {
+      text-align: center; }
+  body h1 {
+    color: white;
+    text-align: center;
+    font-family: 'Orbitron', sans-serif;
+    background: transparent; }
+  body .off-color {
+    color: #FD9126; }
+  body .off-color2 {
+    color: gray; }
   body img {
     width: 100%; }
+  body .post {
+    width: 60%;
+    margin: 0 auto;
+    text-align: center; }
+  body .post > .cap {
+    padding: 1em 0;
+    color: white;
+    font-weight: 500;
+    margin-bottom: 1em;
+    background: #FD9126;
+    max-width: 100%; }
+
+@media screen and (min-width: 880px) {
+  form {
+    width: 585px;
+    margin: 0 auto; } }
