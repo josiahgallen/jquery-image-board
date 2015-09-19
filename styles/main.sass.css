@@ -10,6 +10,8 @@ body {
     border-radius: 8px; }
   body .login {
     text-align: center; }
+  body #logo {
+    float: left; }
   body .register {
     overflow: hidden; }
   body .inputwrapper {
