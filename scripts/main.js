@@ -11,7 +11,6 @@ $(document).ready(function() {
     var $createPass = $('#createpass');
     var $confirmPass = $('#confirmpass');
 
-    var currentUser = 'guest';
     var url = 'http://tiyfe.herokuapp.com/collections/josiah-myPix';
     var urlCurrent = 'http://tiyfe.herokuapp.com/collections/josiah-myPix/55fcb8de58d84a0300000108'
     var urlUsers = 'http://tiyfe.herokuapp.com/collections/josiah-myPix-users';
@@ -44,9 +43,28 @@ $(document).ready(function() {
                         $('#error').css({
                             color: 'white'
                         });
+                        $('#error2').css({
+                            color: '#FD9126'
+                        });
                         assignUser();
+                    } else {
+                        $('#error2').css({
+                            color: 'red'
+                        });
                     }
                 })
+                console.log('logged in');
+                $.get(
+                    url,
+                    function(response) {
+                        response.forEach(function(response) {
+                            if (response._id !== '55fcb8de58d84a0300000108' && response.user === $('#newuser').val()) {
+                                $picWindow.append('<div class="post"><img src="' + response.picture + '"><div class="cap">' + response.caption + '</div></div>');
+                            }
+                        });
+                    },
+                    'json'
+                )
             },
             'json'
         )
@@ -65,41 +83,28 @@ $(document).ready(function() {
                     password: newPassWordStringMatch
                 },
                 function(response) {
-                    $('#loginboxwrapper').toggle('up');
-                    $('#sitewrapper').toggle('down');
+                    $('#login').show();
+                    $registerBtn.show();
+                    $('#sign-up').hide();
+                    $('#back').hide();
                     $('#error').css({
                         color: 'white'
                     });
+                    $('error3').css({
+                        color: '#FD9126'
+                    });
                     assignUser2();
+                    console.log('new registerd user');
                 },
                 'json'
             )
+        } else {
+            $('#error3').css({
+                color: 'red'
+            });
         }
 
     })
-
-    // setInterval(function() {
-    //      console.log('test');
-    //      if (!$('#newuser').val('')) {
-    //         currentUser = $('#newuser').val();
-    //     } else if (!$('#newuemail')){
-    //         currentUser = $('#newuemail').val();
-    //     } else {
-    //         currentUser = 'guest';
-    //     }
-
-        $.get(
-            url,
-            function(response) {
-                response.forEach(function(response) {
-                    if (response._id !== '55fcb8de58d84a0300000108' /*&& response.user === currentUser*/) {
-                        $picWindow.append('<div class="post"><img src="' + response.picture + '"><div class="cap">' + response.caption + '</div></div>');
-                    }
-                });
-            },
-            'json'
-        )
-     //}, 2000);
 
     $dropDown.click(function() {
         $dropMenu.toggle('slow');
@@ -113,11 +118,12 @@ $(document).ready(function() {
         if ((picURL.indexOf('.png') !== -1 || picURL.indexOf('.jpeg') !== -1 || picURL.indexOf('.gif') !== -1 || picURL.indexOf('.jpg') !== -1) && caption.length > 0) {
             $.post(
                 url, {
-                    user: currentUser,
+                    user: $('#newuser').val(),
                     picture: picURL,
                     caption: caption
                 },
                 function(response) {
+                    console.log(response.user);
                     $picWindow.prepend('<div class="post"><img src="' + response.picture + '"><div class="cap">' + response.caption + '</div></div>');
                 },
                 'json'
@@ -147,6 +153,12 @@ $(document).ready(function() {
         });
         $('#new-pix').val('');
         $('#new-pixcap').val('');
+        $('#error2').css({
+            color: '#FD9126'
+        });
+        $('#error3').css({
+            color: '#FD9126'
+        });
     })
 
     function assignUser() {

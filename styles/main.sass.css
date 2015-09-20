@@ -44,6 +44,10 @@ body {
     background: #E32171; }
   body #error {
     color: white; }
+  body #error2 {
+    color: #FD9126; }
+  body #error3 {
+    color: #FD9126; }
   body #add-pic {
     padding: 4em 5em;
     background: white;
